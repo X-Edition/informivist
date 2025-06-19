@@ -1,0 +1,21 @@
+🚀 When you make changes and want to update the live site
+1️⃣ Save and commit your changes
+(Save and back up your code changes on GitHub: main branch)
+==========================================================
+git add .
+git commit -m "Your message about what changed"
+git push
+
+2️⃣ Build production files
+(Compiles)
+==========================================================
+npm run build
+
+3️⃣ Deploy to GitHub Pages
+(Publish compiled site to GitHub Pages: gh-pages branch)
+==========================================================
+npm run deploy
+
+run local client
+==========================================================
+npm run dev
