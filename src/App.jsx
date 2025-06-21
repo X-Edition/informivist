@@ -1,36 +1,31 @@
-import { useState } from 'react'
-import her from './assets/test.jpg'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./index.css";
+import ModelViewer from "./components/ModelViewer";
+import DebugPanel from "./components/DebugPanel";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function Home() {
   return (
-    <>
-      <div>
-        <a 
-          href="https://www.instagram.com/theabbeyrosexo" 
-          target="_blank"
-        >
-          <img 
-            src={her}
-            alt="React logo"
-            style={{
-              width: "200px",
-              height: "200px",
-              animation: "spin 4s linear infinite"
-            }}
-          />
-        </a>
+    <div>
+      <div className="model-wrapper">
+        <ModelViewer />
+        <p className="overlay-text">
+          𝘯𝘰𝘶𝘯 [in·​for·​mi·​vist] <br />
+          an individual or someone; who shares information.
+        </p>
       </div>
-      <h1>Hello sweet girl.</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          Kiss Count: {count}
-        </button>
-      </div>
-    </>
-  )
+      <DebugPanel />
+    </div>
+  );
 }
 
-export default App
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
