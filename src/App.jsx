@@ -13,6 +13,11 @@ function Home() {
           an individual or someone; who shares information.
         </p>
       </div>
+      <div>
+        <p style={{ position: "fixed", bottom: "7rem", left: "50%", transform: "translateX(-50%)", margin: 0 }}>
+          coming soon...
+        </p>
+      </div>
       <DebugPanel />
     </div>
   );

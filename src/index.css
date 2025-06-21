@@ -79,6 +79,8 @@ p {
 
 .model-wrapper {
   flex: 1 1 auto;
+  margin-top: -4rem;
+  margin-bottom: 3rem;
   padding-left: 25vw;
   padding-right: 25vw;
   width: 100%;
